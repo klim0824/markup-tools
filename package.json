@@ -1,0 +1,16 @@
+{
+  "name": "frontendTools",
+  "version": "0.1",
+  "main": "index.js",
+  "private" : true,
+  "description": "Project to study frontend development tools",
+  "author": "klim <klim0824@live.jp> (https://github.com/klim0824/)",
+  "homepage": "https://github.com/klim0824/frontendTools",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/klim0824/frontendTools.git"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}
