@@ -2,7 +2,7 @@
   "name": "frontendTools",
   "version": "0.1",
   "main": "index.js",
-  "private" : true,
+  "private": true,
   "description": "Project to study frontend development tools",
   "author": "klim <klim0824@live.jp> (https://github.com/klim0824/)",
   "homepage": "https://github.com/klim0824/frontendTools",
@@ -11,6 +11,14 @@
     "url": "git+ssh://git@github.com/klim0824/frontendTools.git"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "browser-sync": "^2.24.7",
     "gulp": "^4.0.0"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
   }
 }
