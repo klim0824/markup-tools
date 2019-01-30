@@ -33,6 +33,6 @@ const serve = (done) => {
     done();
 };
 
-const watch = () => gulp.watch([path.all,],reload);
+const watch = () => gulp.watch(path.all,reload);
 
 export default gulp.series(serve, watch);
