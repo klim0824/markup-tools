@@ -4,26 +4,17 @@ import gulp from 'gulp';
 import browserSync from 'browser-sync';
 
 const path = {
-    src : {
-        root : `./src`,
-        all : `./src/*`,
-        assets : {
-            documents : `./src/assets/documents`,
-            fonts : `./src/assets/fonts`,
-            images : `./src/assets/images`,
-            scripts : `./src/assets/scripts`,
-            styles : `./src/assets/styles`
-        }
-    },
-    dest : {
-        root : `./dest`,
-        all : `./dest/*`,
-        assets : {
-            documents : `./dest/assets/documents`,
-            fonts : `./dest/assets/fonts`,
-            images : `./dest/assets/images`,
-            scripts : `./dest/assets/scripts`,
-            styles : `./dest/assets/styles`
+    root : `./`,
+    all : `./*`,
+    assets : {
+        all : `./*`,
+        documents : `./assets/documents`,
+        fonts : `./assets/fonts`,
+        images : `./assets/images`,
+        scripts : `./assets/scripts`,
+        styles : {
+            css : `./assets/styles/css`,
+            scss : `./assets/styles/scss`
         }
     }
 };
@@ -36,12 +27,12 @@ const reload = (done) => {
 const serve = (done) => {
     server.init({
         server: {
-            baseDir: path.dest.root
+            baseDir: path.root
         }
     });
     done();
 };
 
-const watch = () => gulp.watch([path.src.all],reload);
+const watch = () => gulp.watch([path.all,],reload);
 
 export default gulp.series(serve, watch);
