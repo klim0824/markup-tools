@@ -1,6 +1,7 @@
 'use strict';
 
 import gulp from 'gulp';
+import sass from 'gulp-sass';
 import browserSync from 'browser-sync';
 
 const path = {
@@ -13,13 +14,19 @@ const path = {
         images : `./assets/images`,
         scripts : `./assets/scripts`,
         styles : {
-            css : `./assets/styles/css`,
-            scss : `./assets/styles/scss`
+            css : `./assets/styles/css/*.css`,
+            scss : `./assets/styles/scss/*.scss`
         }
     }
 };
 
-
+const style = () =>{
+    return gulp.src(path.assets.styles.scss)
+    .pipe(sass({
+        outputStyle: 'compressed'
+    }))
+    .pipe(gulp.dest('./assets/styles/css/'))
+}
 
 const server = browserSync.create();
 const reload = (done) => {
@@ -37,4 +44,4 @@ const serve = (done) => {
 
 const watch = () => gulp.watch(path.all,reload);
 
-export default gulp.series(serve, watch);
+export default gulp.series(style, serve, watch);
