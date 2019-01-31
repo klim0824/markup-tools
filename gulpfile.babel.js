@@ -14,18 +14,18 @@ const path = {
         images : `./assets/images`,
         scripts : `./assets/scripts`,
         styles : {
-            css : `./assets/styles/css/*.css`,
-            scss : `./assets/styles/scss/*.scss`
+            css : `./assets/styles/css`,
+            scss : `./assets/styles/scss`
         }
     }
 };
 
 const style = () =>{
-    return gulp.src(path.assets.styles.scss)
+    return gulp.src(path.assets.styles.scss + '/*.scss')
     .pipe(sass({
         outputStyle: 'compressed'
     }))
-    .pipe(gulp.dest('./assets/styles/css/'))
+    .pipe(gulp.dest(path.assets.styles.css))
 }
 
 const server = browserSync.create();
