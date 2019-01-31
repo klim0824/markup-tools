@@ -19,10 +19,12 @@ const path = {
     }
 };
 
+
+
 const server = browserSync.create();
 const reload = (done) => {
     server.reload();
-    done();
+    done;
 };
 const serve = (done) => {
     server.init({
@@ -30,7 +32,7 @@ const serve = (done) => {
             baseDir: path.root
         }
     });
-    done();
+    done;
 };
 
 const watch = () => gulp.watch(path.all,reload);
