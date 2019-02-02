@@ -4,12 +4,12 @@ import gulp from 'gulp';
 import sass from 'gulp-sass';
 import browserSync from 'browser-sync';
 
+const rootDir = `./`
 const path = {
-    root : `./`,
-    all : `${root}*`,
+    all : `${rootDir}*`,
     styles : {
-        src : `${root}assets/styles/scss/**/*.scss`,
-        dest : `${root}assets/styles/css`
+        src : `${rootDir}assets/styles/scss/**/*.scss`,
+        dest : `${rootDir}assets/styles/css`
     }
 };
 
@@ -29,7 +29,7 @@ const reload = (done) => {
 const serve = (done) => {
     server.init({
         server: {
-            baseDir: path.root
+            baseDir: rootDir
         }
     });
     done;
@@ -37,4 +37,4 @@ const serve = (done) => {
 
 const watch = () => gulp.watch(path.all,reload);
 
-export default gulp.series(style, watch, serve);
+export default gulp.series(style, serve, watch);
