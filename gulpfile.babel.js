@@ -3,13 +3,13 @@
 import gulp from 'gulp';
 import browserSync from 'browser-sync';
 
-const rootDir = `./`
+const rootDir = `./public`
 const path = {
-    all : `${rootDir}*`,
-    html : `${rootDir}**/*.html`,
+    all : `${rootDir}/*`,
+    html : `${rootDir}/**/*.html`,
     styles : {
-        src : `${rootDir}assets/styles/scss/**/*.scss`,
-        dest : `${rootDir}assets/styles/css`
+        src : `${rootDir}/assets/styles/scss/**/*.scss`,
+        dest : `${rootDir}/assets/styles/css`
     }
 };
 
