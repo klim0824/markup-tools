@@ -5,15 +5,46 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+// ブレークポイントを増減させる。ここの値が不必要に多いと、CSSファイルが肥大化する
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  // lg: 992px,
+  // xl: 1200px
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  // lg: 960px,
+  // xl: 1140px
+);
+
+// colの隙間を定義する。デフォルトは30px
+$grid-gutter-width: 20px;
+
+// メインとなるフォントファミリーを定義する。
+// cf. https://ics.media/entry/200317/
+$font-family-sans-serif: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+
+// line-heightを定義する。
+// デフォルトは1.5で、日本語用に少し数値を高めに。
+$line-height-base: 1.6;
+
+
+// 超必須
 @import "bootstrap-4.5.3/functions";
 @import "bootstrap-4.5.3/variables";
 @import "bootstrap-4.5.3/mixins";
-@import "bootstrap-4.5.3/root";
+
+// 必須
 @import "bootstrap-4.5.3/reboot";
 @import "bootstrap-4.5.3/type";
-@import "bootstrap-4.5.3/images";
-@import "bootstrap-4.5.3/code";
 @import "bootstrap-4.5.3/grid";
+
+// 必要に応じて
+@import "bootstrap-4.5.3/root";
+@import "bootstrap-4.5.3/images";
 @import "bootstrap-4.5.3/tables";
 @import "bootstrap-4.5.3/forms";
 @import "bootstrap-4.5.3/buttons";
@@ -28,29 +59,35 @@
 @import "bootstrap-4.5.3/breadcrumb";
 @import "bootstrap-4.5.3/pagination";
 @import "bootstrap-4.5.3/badge";
-@import "bootstrap-4.5.3/jumbotron";
+// @import "bootstrap-4.5.3/jumbotron";
 @import "bootstrap-4.5.3/alert";
 @import "bootstrap-4.5.3/progress";
 @import "bootstrap-4.5.3/media";
 @import "bootstrap-4.5.3/list-group";
 @import "bootstrap-4.5.3/close";
-@import "bootstrap-4.5.3/toasts";
+// @import "bootstrap-4.5.3/toasts";
 @import "bootstrap-4.5.3/modal";
 @import "bootstrap-4.5.3/tooltip";
 @import "bootstrap-4.5.3/popover";
-@import "bootstrap-4.5.3/carousel";
-@import "bootstrap-4.5.3/spinners";
+// @import "bootstrap-4.5.3/carousel";
+// @import "bootstrap-4.5.3/spinners";
 @import "bootstrap-4.5.3/print";
 
+// 不要
+// @import "bootstrap-4.5.3/code";
+
+
+
 // bootstrap-4.5.3/utilities の中身
+// 必要に応じて
 @import "bootstrap-4.5.3/utilities/align";
 @import "bootstrap-4.5.3/utilities/background";
 @import "bootstrap-4.5.3/utilities/borders";
-@import "bootstrap-4.5.3/utilities/clearfix";
+// @import "bootstrap-4.5.3/utilities/clearfix";
 @import "bootstrap-4.5.3/utilities/display";
 @import "bootstrap-4.5.3/utilities/embed";
 @import "bootstrap-4.5.3/utilities/flex";
-@import "bootstrap-4.5.3/utilities/float";
+// @import "bootstrap-4.5.3/utilities/float";
 @import "bootstrap-4.5.3/utilities/interactions";
 @import "bootstrap-4.5.3/utilities/overflow";
 @import "bootstrap-4.5.3/utilities/position";
