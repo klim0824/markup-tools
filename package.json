@@ -35,5 +35,8 @@
   },
   "browserslist": [
     "cover 99.5% in JP"
-  ]
+  ],
+  "scripts": {
+    "start": "npx gulp"
+  }
 }
