@@ -1,9 +1,13 @@
 @charset "utf-8";
 
-p{color: blue;}
+@import "bootstrap";
+
+p {
+    color: red;
+}
 
 .hoge{
     .fuga{
-        display: block;
+        color: blue;
     }
 }
