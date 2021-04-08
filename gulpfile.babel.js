@@ -13,13 +13,13 @@ import cleanCss from 'gulp-clean-css';
 import rename from 'gulp-rename';
 import browserSync from 'browser-sync';
 
-const rootDir = `.`
+const rootDir = `./public`
 const path = {
     all : `${rootDir}/*`,
     html : `${rootDir}/**/*.html`,
     styles : {
-        src : `${rootDir}/scss/**/*.scss`,
-        dest : `${rootDir}/css`
+        src : `${rootDir}/assets/styles/scss/**/*.scss`,
+        dest : `${rootDir}/assets/styles/css`
     }
 };
 
@@ -34,10 +34,10 @@ const style = () =>{
     .pipe(postcss([
         autoprefixer()
     ]))
+    .pipe(gulp.dest(path.styles.dest))
+    .pipe(cleanCss())
+    .pipe(rename({extname: '.min.css'}))
     .pipe(gulp.dest(path.styles.dest,{sourcemaps:'./'}))
-    // .pipe(cleanCss())
-    // .pipe(rename({extname: '.min.css'}))
-    // .pipe(gulp.dest(path.styles.dest,{sourcemaps:'./'}))
 }
 
 const server = browserSync.create();
