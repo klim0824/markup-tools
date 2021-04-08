@@ -6,17 +6,52 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Index</title>
     <meta name="description" content="Sample html file.">
-    <link rel="stylesheet" media="all" href="./assets/styles/css/styles.min.css">
+    <link rel="stylesheet" href="./assets/styles/css/styles.min.css">
+    <script src="./assets/scripts/lib/jquery-3.6.0.min.js" defer></script>
+    <script src="./assets/scripts/lib/bootstrap.min.js" defer></script>
 </head>
 <body>
-    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A beatae deleniti earum excepturi ipsum iusto molestiae
-    nulla quasi tempora temporibus? Ad laborum maxime, molestiae necessitatibus nobis numquam obcaecati officiis
-    quibusdam!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A beatae deleniti earum excepturi ipsum iusto molestiae
-    nulla quasi tempora temporibus? Ad laborum maxime, molestiae necessitatibus nobis numquam obcaecati officiis
-    quibusdam!</p>
-    <p class="hoge"><span class="fuga">Lorem ipsum dolor sit amet,</span> consectetur adipisicing elit. A beatae deleniti earum excepturi ipsum iusto molestiae
-    nulla quasi tempora temporibus? Ad laborum maxime, molestiae necessitatibus nobis numquam obcaecati officiis
-    quibusdam!</p>
+    <noscript>このサイトではJavaScriptを使用しています。</noscript>
+    <main role="main">
+        <article>
+            <h1 class="text-center">h1タイトル</h1>
+                <section>
+                    <div class="container">
+                        <h2 class="text-center">h2タイトル</h2>
+                        <p class="hoge">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nulla eveniet iure placeat ex culpa ullam similique, illo, nam ad vero blanditiis aliquam dolorem atque deserunt, recusandae excepturi officiis dolores?</p>
+                        <section>
+                            <h3>h3タイトル</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi molestias tempora quae laborum voluptates deleniti, illum a non officia fugiat minus nobis nulla similique dolor, obcaecati consequuntur. Ipsa, voluptatem porro?</p>
+                        </section>
+                    </div>
+                </section>
+                <section class="mt-5 bg-light">
+                    <div class="container">
+                        <h2 class="text-center">カレー レシピ</h2>
+                        <p>スマホ幅で材料と作り方が左右に1:1、PC幅で空白-材料-作り方-空白が 1/4ずつになるサンプル</p>
+                        <p>.container の中に .row を置き、 .row の中に複数の .col を置く</p>
+                        <div class="row">
+                            <section class="col-6 col-md-3 offset-md-3">
+                                <h3>材料</h3>
+                                <ul>
+                                    <li>肉</li>
+                                    <li>野菜</li>
+                                    <li>カレールー</li>
+                                </ul>
+                            </section>
+                            <section class="col-6 col-md-3">
+                                <h3>作り方</h3>
+                                <ol>
+                                    <li>切る</li>
+                                    <li>焼く</li>
+                                    <li>煮る</li>
+                                </ol>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </article>
+    </main>
 </body>
 </html>
