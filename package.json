@@ -1,6 +1,7 @@
 {
 	"name": "markup-tools",
 	"version": "0.1",
+	"license": "MIT",
 	"main": "index.js",
 	"private": true,
 	"description": "Project to study frontend development tools",
