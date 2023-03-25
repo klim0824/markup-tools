@@ -1,8 +1,8 @@
 {
-    "recommendations": [
-        "editorconfig.editorconfig",
-        "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode",
-        "nhoizey.gremlins"
-    ]
+	"recommendations": [
+		"editorconfig.editorconfig",
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"nhoizey.gremlins"
+	]
 }
