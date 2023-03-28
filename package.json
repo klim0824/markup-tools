@@ -13,6 +13,7 @@
 	},
 	"scripts": {
 		"build:template": "eleventy",
+		"build:style": "sass src/assets/style:dist/assets/style",
 		"typeCheck": "tsc --noEmit",
 		"lint:js": "eslint --ext .js,.ts .",
 		"lint:js:fix": "eslint --fix --ext .js,.ts .",
@@ -31,6 +32,7 @@
 		"eslint": "^8.36.0",
 		"eslint-config-prettier": "^8.8.0",
 		"prettier": "^2.8.7",
+		"sass": "^1.60.0",
 		"typescript": "^5.0.2"
 	}
 }
