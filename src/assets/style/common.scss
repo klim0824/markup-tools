@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+@use '../../../node_modules/sanitize.css/sanitize.css';
+@use '../../../node_modules/sanitize.css/system-ui.css';
+@use '../../../node_modules/sanitize.css/typography.css';
+@use '../../../node_modules/sanitize.css/ui-monospace.css';
+@use '../../../node_modules/sanitize.css/assets.css';
+@use '../../../node_modules/sanitize.css/forms.css';
+@use '../../../node_modules/sanitize.css/reduce-motion.css';
+
 .hoge {
 	display: block;
 	width: 100%;
