@@ -1,6 +1,6 @@
 {
 	"name": "markup-tools",
-	"version": "0.1",
+	"version": "0.0.1",
 	"license": "MIT",
 	"private": true,
 	"description": "Project to study frontend development tools",
@@ -11,6 +11,7 @@
 		"url": "git+ssh://git@github.com/klim0824/markup-tools.git"
 	},
 	"scripts": {
+		"build": "npm-run-all --parallel build:*",
 		"build:template": "eleventy",
 		"build:style": "sass src/assets/style:dist/assets/style",
 		"build:script": "webpack --mode production",
@@ -21,7 +22,8 @@
 		"lint:code:fix": "prettier --write .",
 		"lint": "npm run lint:js && npm run lint:code",
 		"lint:fix": "npm run lint:js:fix && npm run lint:code:fix",
-		"watch:template": "eleventy --serve",
+		"watch": "npm-run-all --parallel watch:*",
+		"watch:template": "eleventy --watch",
 		"watch:script": "webpack --watch"
 	},
 	"dependencies": {
@@ -35,6 +37,7 @@
 		"@typescript-eslint/parser": "^5.56.0",
 		"eslint": "^8.36.0",
 		"eslint-config-prettier": "^8.8.0",
+		"npm-run-all": "^4.1.5",
 		"prettier": "^2.8.7",
 		"sass": "^1.60.0",
 		"ts-loader": "^9.4.2",
