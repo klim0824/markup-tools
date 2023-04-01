@@ -11,10 +11,13 @@
 		"url": "git+ssh://git@github.com/klim0824/markup-tools.git"
 	},
 	"scripts": {
+		"start": "npm run dev",
+		"dev": "npm-run-all --sequential build server",
 		"build": "npm-run-all --parallel build:*",
 		"build:template": "eleventy",
 		"build:style": "sass src/assets/style:dist/assets/style",
 		"build:script": "webpack --mode production",
+		"clean": "rimraf dist",
 		"typeCheck": "tsc --noEmit",
 		"lint:js": "eslint --ext .js,.ts .",
 		"lint:js:fix": "eslint --fix --ext .js,.ts .",
@@ -41,6 +44,7 @@
 		"eslint-config-prettier": "^8.8.0",
 		"npm-run-all": "^4.1.5",
 		"prettier": "^2.8.7",
+		"rimraf": "^4.4.1",
 		"sass": "^1.60.0",
 		"ts-loader": "^9.4.2",
 		"typescript": "^5.0.2",
