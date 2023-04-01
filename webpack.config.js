@@ -3,7 +3,12 @@ const path = require('path');
 module.exports = {
 	mode: 'development',
 	entry: {
-		common: './src/assets/script/common.ts',
+		common: path.join(__dirname, '/src/assets/script/common.ts'),
+		top: path.join(__dirname, '/src/assets/script/top.ts'),
+	},
+	output: {
+		path: path.join(__dirname, 'dist/assets/script'),
+		filename: '[name].js',
 	},
 	module: {
 		rules: [
@@ -13,10 +18,6 @@ module.exports = {
 				exclude: /node_modules/,
 			},
 		],
-	},
-	output: {
-		path: path.resolve(__dirname, 'dist/assets/script'),
-		filename: '[name].js',
 	},
 	resolve: {
 		extensions: ['.ts', '.js'],
