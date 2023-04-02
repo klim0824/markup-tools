@@ -7,7 +7,7 @@ module.exports = {
 		top: path.join(__dirname, '/src/assets/script/top.ts'),
 	},
 	output: {
-		path: path.join(__dirname, 'dist/assets/script'),
+		path: path.join(__dirname, '/dist/assets/script'),
 		filename: '[name].js',
 	},
 	module: {
